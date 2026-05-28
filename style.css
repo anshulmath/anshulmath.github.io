@@ -359,32 +359,49 @@ footer {
 .pagefind-ui {
 
     position: static !important;
+
+    --pagefind-ui-scale: 1.0;
+
+    --pagefind-ui-primary: #7b5a36;
+
+    --pagefind-ui-text: #2c241d;
+
+    --pagefind-ui-background: #fffaf1;
+
+    --pagefind-ui-border: #9a816d;
+
+    --pagefind-ui-tag: #eee0ca;
+
+    --pagefind-ui-border-width: 2px;
 }
 
-.pagefind-ui__drawer {
-
-    position: static !important;
-}
+/* =========================================
+   SEARCH INPUT
+========================================= */
 
 .pagefind-ui__search-input {
 
-    font-family: 'IBM Plex Sans', sans-serif !important;
+    font-family: 'VT323', monospace !important;
 
-    font-size: 1.1rem !important;
+    font-size: 2rem !important;
 
-    border: 2px solid #9a816d !important;
+    line-height: 64px !important;
 
     background: #fffaf1 !important;
 
     color: #2c241d !important;
 
-    padding: 0.7rem 0.7rem 0.7rem 3rem !important;
+    border: 2px solid #9a816d !important;
 
-    height: 60px !important;
+    height: 64px !important;
 
-    outline: none !important;
+    padding: 0 1rem 0 3.5rem !important;
+
+    border-radius: 0 !important;
 
     box-shadow: none !important;
+
+    outline: none !important;
 }
 
 .pagefind-ui__search-input:focus {
@@ -392,11 +409,31 @@ footer {
     border-color: #7b5a36 !important;
 }
 
-.pagefind-ui__search-clear,
+/* =========================================
+   SEARCH ICON
+========================================= */
+
 .pagefind-ui__search-icon {
 
-    top: 18px !important;
+    position: absolute !important;
+
+    left: 1rem !important;
+
+    top: 20px !important;
 }
+
+/* =========================================
+   CLEAR BUTTON
+========================================= */
+
+.pagefind-ui__search-clear {
+
+    top: 20px !important;
+}
+
+/* =========================================
+   RESULTS
+========================================= */
 
 .pagefind-ui__result {
 
