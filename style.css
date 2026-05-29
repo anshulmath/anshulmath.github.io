@@ -68,7 +68,6 @@ body {
     -webkit-font-smoothing: antialiased; */
 }
 
-
 /* =========================================
    TOP NAVBAR
 ========================================= */
@@ -315,17 +314,6 @@ pre {
 /* =========================================
    FOOTER
 ========================================= */
-
-/* footer {
-
-    font-family: 'VT323', monospace;
-
-    text-align: center;
-
-    padding: 2rem;
-
-    opacity: 0.7;
-} */
 
 .footer {
     display: flex;
@@ -604,4 +592,27 @@ pre {
 
     filter: invert(20%) sepia(30%) saturate(400%) hue-rotate(350deg);
     /* makes icons match your brown theme */
+}
+
+.posts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+}
+
+mjx-container {
+    font-size: 1.05em !important;
+    opacity: 1;
+}
+
+mjx-container[display="true"] {
+    margin: 0.5rem 0;
+}
+
+mjx-container[jax="CHTML"] {
+    font-family: 'IBM Plex Sans', sans-serif !important;
+}
+
+p {
+    font-weight: 10;
 }

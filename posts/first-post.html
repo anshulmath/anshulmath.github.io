@@ -19,8 +19,7 @@
         };
     </script>
 
-    <script
-        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
     </script>
 
 </head>
@@ -39,18 +38,43 @@
             MORERA'S THEOREM
         </h1>
 
-        <p>
+        <!-- <p>
             Suppose $f$ is continuous and
-            satisfies:
+            satisfies: $\oint_\gamma f(z)\,dz = 0$
+        </p> -->
+
+        <p>
+            Let $f: \Omega \to \mathbb{C}$ be a continuous function defined on an open set $\Omega \subset
+            \mathbb{C}$. Suppose that for every piecewise $C^1$ closed curve $\gamma \subset \Omega$, we have
+            \[
+            \int_{\gamma} f(z)\,dz = 0.
+            \]
+            Fix $z_0 \in \Omega$ and define
+            \[
+            F(z) = \int_{\gamma_{z_0,z}} f(w)\,dw,
+            \]
+            where $\gamma_{z_0,z}$ is any piecewise smooth path in $\Omega$ joining $z_0$ to $z$. The
+            assumption implies that $F$ is well-defined, since the integral is path-independent.
         </p>
 
         <p>
+            Now let $h \to 0$ such that $z + h \in \Omega$. Then
             \[
-            \oint_\gamma f(z)\,dz = 0
+            \frac{F(z+h) - F(z)}{h}
+            = \frac{1}{h} \int_{\gamma_{z,z+h}} f(w)\,dw.
             \]
+            By continuity of $f$, we may write $f(w) = f(z) + \varepsilon(w)$, where $\varepsilon(w) \to 0$
+            as $w \to z$. Hence,
+            \[
+            \frac{F(z+h) - F(z)}{h}
+            = f(z) + \frac{1}{h} \int_{\gamma_{z,z+h}} \varepsilon(w)\,dw.
+            \]
+            The second term tends to $0$ as $h \to 0$, showing that $F'(z) = f(z)$. Therefore $f$ is
+            holomorphic on $\Omega$.
         </p>
 
     </div>
 
 </body>
+
 </html>
