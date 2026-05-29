@@ -356,7 +356,7 @@ footer {
 /* pixel gif animation on desktop */
 @media (min-width: 701px) {
     .pixel-gif {
-        /* transform: translateY(25px); */
+        transform: translateY(25px);
         margin-top: -5px; /* GIF to sit slightly offset under the title (like an RPG companion sprite beside a logo) */
     }
 }
