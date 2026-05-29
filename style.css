@@ -562,8 +562,8 @@ footer {
 }
 
 .gif-wrap {
-    width: clamp(45px, 8vw, 70px);
-    height: clamp(45px, 8vw, 70px);
+    width: clamp(45px, 8vw, 60px);
+    height: clamp(45px, 8vw, 60px);
 
     display: flex;
     align-items: center;
