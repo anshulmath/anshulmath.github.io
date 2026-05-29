@@ -481,9 +481,8 @@ footer {
 
 .hero {
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     gap: 1rem;
-    margin-bottom: 2rem;
     flex-wrap: wrap;
 }
 
