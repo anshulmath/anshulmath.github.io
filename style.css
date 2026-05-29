@@ -359,6 +359,7 @@ pre {
     .pixel-gif {
 
         margin-left: 20px;
+        transform: translateY(4px);
 
         /* transform: translateY(12px); */
     }
