@@ -19,8 +19,7 @@
         };
     </script>
 
-    <script
-        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
     </script>
 
 </head>
@@ -41,10 +40,26 @@
 
         <div id="search"></div>
 
-        <h1>
+        <div class="hero">
+
+            <div class="hero-text">
+
+                <h1>
+                    ANSHUL.MATH
+                </h1>
+
+            </div>
+
+            <img id="wizard" src="assets/images/polyKnight_idle.gif" class="pixel-gif">
+
+        </div>
+
+        <!-- <h1>
             ANSHUL<br>
-            MATH
-        </h1>
+            MATH 
+            <img src="assets/images/polyKnight_idle.gif"
+                class="pixel-gif">
+        </h1> -->
 
         <p>
             Expository mathematics, geometry,
@@ -91,11 +106,28 @@
 
     </footer>
 
+
+    <script>
+
+        const wizard = document.getElementById("wizard");
+
+        wizard.addEventListener("click", () => {
+
+            wizard.src = "assets/images/polyKnight_jump.gif";
+
+            setTimeout(() => {
+
+                wizard.src = "assets/images/polyKnight_idle.gif";
+
+            }, 700);
+
+        });
+
+    </script>
+
 </body>
 
-<link
-    href="/pagefind/pagefind-ui.css"
-    rel="stylesheet">
+<link href="/pagefind/pagefind-ui.css" rel="stylesheet">
 
 <script src="/pagefind/pagefind-ui.js"></script>
 
@@ -105,9 +137,5 @@
         showSubResults: true
     });
 </script>
-
-<img
-    src="assets/images/fireLogo.png"
-    class="pixel-avatar">
 
 </html>
