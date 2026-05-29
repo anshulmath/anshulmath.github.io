@@ -113,11 +113,15 @@
 
         wizard.addEventListener("click", () => {
 
+            wizard.style.position = "relative";
+            wizard.style.top = "-6px";
+
             wizard.src = "assets/images/polyKnight_jump.gif";
 
             setTimeout(() => {
 
                 wizard.src = "assets/images/polyKnight_idle.gif";
+                wizard.style.top = "0px";
 
             }, 700);
 
