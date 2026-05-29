@@ -518,7 +518,7 @@ footer {
 
     image-rendering: crisp-edges;
 
-    width: clamp(40px, 10vw, 80px);
+    width: clamp(40px, 10vw, 50px);
 
     height: auto;
 
