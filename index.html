@@ -36,276 +36,270 @@
 
     </nav>
 
-    <div class="container">
+    <main class="page-content">
 
-        <div id="search"></div>
+        <div class="container">
 
-        <div class="hero">
+            <div id="search"></div>
 
-            <div class="hero-text">
+            <div class="hero">
 
-                <h1>
-                    ANSHUL.MATH
-                </h1>
+                <div class="hero-text">
 
-            </div>
+                    <h1>
+                        ANSHUL.MATH
+                    </h1>
 
-            <div class="wizard-box">
+                </div>
 
-                <img id="wizard" src="assets/images/polyKnight_idle.gif" class="pixel-gif">
+                <div class="wizard-box">
 
-            </div>
+                    <img id="wizard" src="assets/images/polyKnight_idle.gif" class="pixel-gif">
 
-            <!-- <div class="gif-wrap">
+                </div>
+
+                <!-- <div class="gif-wrap">
                 <img id="wizard" src="assets/images/polyKnight_idle.gif" class="pixel-gif">
             </div> -->
 
-        </div>
-
-        <p>
-            Expository mathematics, geometry,
-            complex analysis, algebra, and notes.
-        </p>
-
-        <div class="posts-grid">
-            <div class="post-card">
-
-                <a href="posts/first-post.html">
-
-                    <div class="post-title">
-                        MORERA'S THEOREM
-                    </div>
-
-                    <p>
-                        Unexpected applications and elegant uses.
-                    </p>
-
-                </a>
-
             </div>
 
-            <div class="post-card">
+            <p>
+                Expository mathematics, geometry,
+                complex analysis, algebra, and notes.
+            </p>
 
-                <a href="posts/generating-functions.html">
+            <div class="posts-grid">
+                <div class="post-card">
 
-                    <div class="post-title">
-                        GENERATING FUNCTIONS
-                    </div>
-                    <br>
-                    <p>
-                        Visual intuition and proofs.
-                    </p>
+                    <a href="posts/first-post.html">
 
-                </a>
+                        <div class="post-title">
+                            MORERA'S THEOREM
+                        </div>
 
+                        <p>
+                            Unexpected applications and elegant uses.
+                        </p>
+
+                    </a>
+
+                </div>
+
+                <div class="post-card">
+
+                    <a href="posts/generating-functions.html">
+
+                        <div class="post-title">
+                            GENERATING FUNCTIONS
+                        </div>
+
+                        <p>
+                            Introduction to generating functions for newbies.
+                        </p>
+
+                    </a>
+
+                </div>
             </div>
+
         </div>
 
-    </div>
+        <!-- GIF ANIMATIONS AND INTERACTIONS -->
+        <script>
 
-    <footer class="footer">
-        <span>Anshul.Math</span>
+            const wizard = document.getElementById("wizard");
 
-        <span class="footer-links">
-            <a href="https://github.com/anshulrajsingh001" target="_blank" class="icon-link">
-                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" class="icon">
-                GitHub
-            </a>
+            /* =========================================
+               GIF PATHS
+            ========================================= */
 
-            <span>•</span>
+            const idleGif = "assets/images/polyKnight_idle.gif";
 
-            <a href="mailto:anshulrajsingh15@gmail.com" class="icon-link">
-                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/gmail.svg" class="icon">
-                Email
-            </a>
-        </span>
-    </footer>
+            const duckGif = "assets/images/polyKnight_duck.gif";
 
+            const hurtGif = "assets/images/polyKnight_hurt.gif";
 
+            const deadGif = "assets/images/polyKnight_dead.gif";
 
+            const respawnGif = "assets/images/polyKnight_spawn.gif";
 
-    <!-- GIF ANIMATIONS AND INTERACTIONS -->
-    <script>
+            const sleepGif = "assets/images/polyKnight_sleep.gif";
 
-        const wizard = document.getElementById("wizard");
+            /* =========================================
+               SETTINGS
+            ========================================= */
 
-        /* =========================================
-           GIF PATHS
-        ========================================= */
+            const sleepDelay = 5000;
 
-        const idleGif = "assets/images/polyKnight_idle.gif";
+            /* =========================================
+               VARIABLES
+            ========================================= */
 
-        const duckGif = "assets/images/polyKnight_duck.gif";
+            let clickCount = 0;
 
-        const hurtGif = "assets/images/polyKnight_hurt.gif";
+            let clickTimer;
 
-        const deadGif = "assets/images/polyKnight_dead.gif";
+            let sleepTimer;
 
-        const respawnGif = "assets/images/polyKnight_spawn.gif";
+            let isDead = false;
 
-        const sleepGif = "assets/images/polyKnight_sleep.gif";
+            let isSleeping = false;
 
-        /* =========================================
-           SETTINGS
-        ========================================= */
-
-        const sleepDelay = 5000;
-
-        /* =========================================
-           VARIABLES
-        ========================================= */
-
-        let clickCount = 0;
-
-        let clickTimer;
-
-        let sleepTimer;
-
-        let isDead = false;
-
-        let isSleeping = false;
-
-        /* =========================================
-           START SLEEP TIMER
-        ========================================= */
-
-        startSleepTimer();
-
-        /* =========================================
-           CLICK EVENT
-        ========================================= */
-
-        wizard.addEventListener("click", () => {
-
-            if (isDead) return;
-
-            /* =====================================
-               WAKE FROM SLEEP
-            ===================================== */
-
-            if (isSleeping) {
-
-                isSleeping = false;
-
-                wizard.src = idleGif;
-
-                resetSleepTimer();
-
-                return;
-            }
-
-            resetSleepTimer();
-
-            clickCount++;
-
-            clearTimeout(clickTimer);
-
-            /* =====================================
-               SINGLE CLICK → DUCK
-            ===================================== */
-
-            if (clickCount === 1) {
-
-                wizard.src = duckGif;
-
-                clickTimer = setTimeout(() => {
-
-                    wizard.src = idleGif;
-
-                    clickCount = 0;
-
-                }, 1000);
-            }
-
-            /* =====================================
-               DOUBLE CLICK → HURT
-            ===================================== */
-
-            else if (clickCount === 2) {
-
-                clearTimeout(clickTimer);
-
-                wizard.src = hurtGif;
-
-                clickTimer = setTimeout(() => {
-
-                    wizard.src = idleGif;
-
-                    clickCount = 0;
-
-                }, 800);
-            }
-
-            /* =====================================
-               TRIPLE CLICK → DEATH
-            ===================================== */
-
-            else if (clickCount >= 3) {
-
-                clearTimeout(clickTimer);
-
-                clickCount = 0;
-
-                isDead = true;
-
-                clearTimeout(sleepTimer);
-
-                wizard.src = deadGif;
-
-                wizard.style.pointerEvents = "none";
-
-                /* respawn animation */
-
-                setTimeout(() => {
-
-                    wizard.src = respawnGif;
-
-                }, 1300);
-
-                /* back to idle */
-
-                setTimeout(() => {
-
-                    isDead = false;
-
-                    wizard.src = idleGif;
-
-                    wizard.style.pointerEvents = "auto";
-
-                    resetSleepTimer();
-
-                }, 2400);
-            }
-
-        });
-
-        /* =========================================
-           SLEEP SYSTEM
-        ========================================= */
-
-        function startSleepTimer() {
-
-            sleepTimer = setTimeout(() => {
-
-                if (!isDead) {
-
-                    isSleeping = true;
-
-                    wizard.src = sleepGif;
-                }
-
-            }, sleepDelay);
-
-        }
-
-        function resetSleepTimer() {
-
-            clearTimeout(sleepTimer);
+            /* =========================================
+               START SLEEP TIMER
+            ========================================= */
 
             startSleepTimer();
 
-        }
+            /* =========================================
+               CLICK EVENT
+            ========================================= */
 
+            wizard.addEventListener("click", () => {
+
+                if (isDead) return;
+
+                /* =====================================
+                   WAKE FROM SLEEP
+                ===================================== */
+
+                if (isSleeping) {
+
+                    isSleeping = false;
+
+                    wizard.src = idleGif;
+
+                    resetSleepTimer();
+
+                    return;
+                }
+
+                resetSleepTimer();
+
+                clickCount++;
+
+                clearTimeout(clickTimer);
+
+                /* =====================================
+                   SINGLE CLICK → DUCK
+                ===================================== */
+
+                if (clickCount === 1) {
+
+                    wizard.src = duckGif;
+
+                    clickTimer = setTimeout(() => {
+
+                        wizard.src = idleGif;
+
+                        clickCount = 0;
+
+                    }, 1000);
+                }
+
+                /* =====================================
+                   DOUBLE CLICK → HURT
+                ===================================== */
+
+                else if (clickCount === 2) {
+
+                    clearTimeout(clickTimer);
+
+                    wizard.src = hurtGif;
+
+                    clickTimer = setTimeout(() => {
+
+                        wizard.src = idleGif;
+
+                        clickCount = 0;
+
+                    }, 800);
+                }
+
+                /* =====================================
+                   TRIPLE CLICK → DEATH
+                ===================================== */
+
+                else if (clickCount >= 3) {
+
+                    clearTimeout(clickTimer);
+
+                    clickCount = 0;
+
+                    isDead = true;
+
+                    clearTimeout(sleepTimer);
+
+                    wizard.src = deadGif;
+
+                    wizard.style.pointerEvents = "none";
+
+                    /* respawn animation */
+
+                    setTimeout(() => {
+
+                        wizard.src = respawnGif;
+
+                    }, 1300);
+
+                    /* back to idle */
+
+                    setTimeout(() => {
+
+                        isDead = false;
+
+                        wizard.src = idleGif;
+
+                        wizard.style.pointerEvents = "auto";
+
+                        resetSleepTimer();
+
+                    }, 2400);
+                }
+
+            });
+
+            /* =========================================
+               SLEEP SYSTEM
+            ========================================= */
+
+            function startSleepTimer() {
+
+                sleepTimer = setTimeout(() => {
+
+                    if (!isDead) {
+
+                        isSleeping = true;
+
+                        wizard.src = sleepGif;
+                    }
+
+                }, sleepDelay);
+
+            }
+
+            function resetSleepTimer() {
+
+                clearTimeout(sleepTimer);
+
+                startSleepTimer();
+
+            }
+
+        </script>
+    </main>
+
+    <!-- Footer -->
+
+    <div id="footer"></div>
+
+    <script>
+        fetch('/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            });
     </script>
 
 </body>

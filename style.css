@@ -49,6 +49,10 @@ body {
 
     -webkit-font-smoothing: antialiased;
 
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
 
     /* default theme */
     /* margin: 0;
@@ -148,11 +152,15 @@ body {
 
 .container {
 
-    max-width: 950px;
+    max-width: 1000px;
 
     margin: auto;
 
     padding: 3rem 2rem;
+}
+
+.page-content {
+    flex: 1;
 }
 
 

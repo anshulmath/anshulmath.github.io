@@ -48,18 +48,45 @@
 
             <div class="download-buttons">
 
-                <a href="../assets/notes/doc.pdf" download>
-                    📜 PDF
+                <a href="../assets/notes/doc.pdf">
+                    [PDF]
                 </a>
 
-                <a href="../assets/notes/doc.tex" download>
-                    ⚔ TeX
+                <a href="../assets/notes/solutions.pdf">
+                    [SOL]
+                </a>
+
+                <a href="../assets/notes/doc.tex">
+                    [TeX]
                 </a>
 
             </div>
 
         </div>
+
+        <div class="post-card">
+
+            <p>
+                Notes on generating functions, integer partitions,
+                and applications to combinatorics.
+
+                Download the PDF for the complete article.
+            </p>
+
+        </div>
     </div>
+
+    <!-- Footer -->
+
+    <div id="footer"></div>
+
+    <script>
+        fetch('/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            });
+    </script>
 
 </body>
 
