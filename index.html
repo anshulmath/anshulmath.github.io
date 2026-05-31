@@ -85,7 +85,7 @@
             <div class="posts-grid">
 
                 <div class="post-card">
-                    <a href="posts/first-post.html">
+                    <a href="posts/morera.html">
 
                         <div class="post-title">
                             MORERA'S THEOREM
@@ -432,8 +432,9 @@
                 if (seen.has(url)) continue;
                 seen.add(url);
 
+                // FIX: Use the explicit page title metadata indexed by Pagefind
                 currentResults.push({
-                    title: data.meta.title,
+                    title: data.meta.title || "Untitled Post",
                     url
                 });
             }
