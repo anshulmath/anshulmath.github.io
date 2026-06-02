@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Generating Functions</title>
+
+    <link rel="stylesheet" href="../style.css">
+
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$']]
+            }
+        };
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+
+</head>
+
+<body>
+
+    <nav class="navbar">
+
+        <a href="../index.html">HOME</a>
+
+    </nav>
+
+    <div class="container">
+
+        <div class="post-header">
+
+            <div class="post-meta">
+
+                <h1>HAIRY BALL THEOREM</h1>
+
+                <p class="post-date">
+                    May 29, 2026
+                </p>
+
+            </div>
+
+            <!-- <div class="download-buttons">
+
+                <a href="../assets/notes/doc.pdf">
+                    [PDF]
+                </a>
+
+                <a href="../assets/notes/solutions.pdf">
+                    [SOL]
+                </a>
+
+                <a href="../assets/notes/doc.tex">
+                    [TeX]
+                </a>
+
+            </div> -->
+
+        </div>
+
+        <!-- <div class="post-card">
+
+            <p>
+                Suppose $\textbf{v}$ is a continuous vector field on the unit sphere $S^2$. Then there is a point $\textbf{p}$ in $S^2$ such that $\textbf{v}(\textbf{p}) = \textbf{0}$.
+            </p>
+
+        </div> -->
+
+        <div class="theorem">
+
+            <span class="theorem-label"></span>
+
+            <p>
+                Let $m$ be a positive integer, and $A_1, A_2, \ldots, A_m$ (not necessarily different) be $m$ subsets of
+                a finite set $A$. It is known that for any nonempty subset $I$ of $\{1, 2 \ldots, m \}$,
+                \[ \Big| \bigcup_{i \in I} A_i \Big| \ge |I|+1. \]Show that the elements of $A$ can be colored black and
+                white, so that each of $A_1,A_2,\ldots,A_m$ contains both black and white elements.
+            </p>
+
+        </div>
+
+        <div class="proof">
+
+            <span class="proof-label"></span>
+
+            <p>
+                Consider a bipartite graph $G(S,T,E)$ with $S=\{A_1,\cdots,A_m\}$ representing the sets,
+                $T=\bigcup_{j=1}^m A_j$ representing the elements and $E$ representing the edges. Connect an edge
+                between $A_j$ and $b\in T$ if and only if $b\in A_j$. It is equivalent to prove that there exists a
+                coloring of $T$ in black and white such that each vertex in $S$ has at least one black neighbor and at
+                least one white neighbor. The edges will be denoted by ordered pairs $(s,t)$ where $s\in S$ and $t\in
+                T$.
+            </p>
+
+            <p>
+                By Hall's marriage theorem, there exists an injection $M\colon S\to T$ such that $M(s)\in N_G(s)$ for
+                all $s\in S$. Let $E(M)$ denote the set of pairs $\{(s,M(s))\mid s\in S\}$.
+            </p>
+
+            <p>
+                The main claim is as follows:
+            </p>
+
+            <div class="claim">
+
+                <span class="claim-label"></span>
+
+                <p>
+                    Let $k$ be an integer with $0\le k\le m$. Then there exists a subgraph $G_k(S,T,E_k)\subset
+                    G(S,T,E)$ and a subset $S_k\subset S$ such that the following conditions hold:
+                </p>
+
+                <br>
+
+                <ol>
+                    <li>$|S_k|=k$,</li>
+
+                    <li>$E(M)\subset E_k$,</li>
+
+                    <li>for a vertex $s\in S$ we have $\deg_{G_k}(s)=\begin{cases}2 & s\in S_k \\ 1 & s\notin
+                    S_k\end{cases}$,</li>
+
+                    <li>$N_{G_k}(S_k)\cap M(S\setminus S_k)=\emptyset$, and</li>
+
+                    <li>there exists a coloring of $N_{G_k}(S_k)$ in black and white such that for each vertex $s\in
+                    S_k$, the two neighbors of $s$ in $G_k$ are of distinct colors.</li>
+                </ol>
+            </div>
+
+            <div class="proof-claim">
+
+                <span class="proof-claim-label"></span>
+
+                <p>
+                    We prove the claim by induction on $k$. For the base case $k=0$ choose $E_0=E(M)$, $S_0=\emptyset$
+                    and the empty coloring. Now assume the claim is true for some $k\le m$ and we will prove it for
+                    $k+1$. Pick a subgraph $G_k(S,T,E_k)\subset G(S,T,E)$, a subset $S_k\subset S$ and a coloring $c_k$
+                    of $N_{G_k}(S_k)$ satisfying the induction hypothesis. Define $Y_k\doteqdot S\setminus S_k$. By the
+                    problem statement we have $N_G(Y_k)\ge |Y_k| + 1$. Hence there exist vertices $u_0\in Y_k$ and
+                    $v_0\in T\setminus M(Y_k)$ such that $e_0\doteqdot(u_0,v_0)\in E$. Moreover we have $M(u_0)\notin
+                    N_{G_k}(S_k)$ by condition (4) in the induction hypothesis. Now define a subgraph
+                    $G_{k+1}(S,T,E_{k+1})\subset G(S,T,E)$ by $E_{k+1}\doteqdot E_k\cup\{e_0\}$. Moreover define a
+                    subset $S_{k+1}\doteqdot S_k\cup\{u_0\}\subset S$. It is easily seen that conditions (1)-(4) hold.
+                    It remains to provide a coloring of $N_{G_{k+1}}(S_{k+1})$ satisfying the induction step. We divide
+                    into cases. <br>
+                </p>
+
+                <p>
+                    Case 1. $v_0\in N_{G_k}(S_k)$. Then use the coloring $c_k$ and color $M(u_0)$ with the color not
+                    presented in $v_0$.
+                </p>
+
+                <br>
+
+                <p>
+                    Case 2. $v_0\notin N_{G_k}(S_k)$. Then use the coloring $c_k$, color $v_0$ white and $M(u_0)$ black.
+                </p>
+
+                <p>
+                    In both cases the new coloring satisfies condition (5). Hence the induction step is proved.
+                </p>
+            </div>
+            <p>
+                To finish the proof of the problem, substitute $k=m$ in the claim. Then we have a graph
+                $G_m(S,T,E_m)\subset G(S,T,E)$ such that $\deg_{G_m}(s)=2$ for every $s\in S$, and there exists a
+                coloring of $N_{G_m}(S)$ such that for each vertex $s\in S$, the two neighbors of $s$ in $G_m$ are
+                of distinct colors. Now color the rest of vertices in $T$ arbitrarily (e.g color all of them white).
+                This coloring satisfies the problem statement.
+            </p>
+        </div>
+
+        <!-- Footer -->
+
+        <div id="footer"></div>
+
+        <script>
+            fetch('/footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer').innerHTML = data;
+                });
+        </script>
+
+</body>
+
+</html>
