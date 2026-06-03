@@ -4,6 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=VT323&family=IBM+Plex+Sans:wght@500;600;700&family=Nunito:wght@400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap');
 
 :root {
     --bg: #f5efe4;
@@ -29,6 +30,8 @@
     --muted-text: rgba(44, 36, 29, 0.65);
 
     --navbar-bg: #fffaf1;
+
+    --nav-weight: 800;
 }
 
 /* =========================================
@@ -187,6 +190,8 @@ body {
     margin-right: 2rem;
 
     letter-spacing: var(--nav-spacing);
+
+    font-weight: var(--nav-weight);
 }
 
 .navbar a:hover {
@@ -862,100 +867,6 @@ p {
     border-bottom: 2px solid #9a816d;
 }
 
-/* =========================================
-   SEARCH BAR
-========================================= */
-
-#search {
-
-    margin-top: 3rem;
-
-    /* margin-bottom: -1rem; */
-}
-
-.pagefind-ui {
-
-    position: static !important;
-
-    --pagefind-ui-scale: 1.0;
-
-    --pagefind-ui-primary: #7b5a36;
-
-    --pagefind-ui-text: #2c241d;
-
-    --pagefind-ui-background: #fffaf1;
-
-    --pagefind-ui-border: #9a816d;
-
-    --pagefind-ui-tag: #eee0ca;
-
-    --pagefind-ui-border-width: 2px;
-
-    font-family: 'IBM Plex Sans', sans-serif !important;
-}
-
-/* SEARCH INPUT */
-
-.pagefind-ui__search-input {
-
-    font-family: 'VT323', monospace !important;
-
-    font-size: 2rem !important;
-
-    line-height: 64px !important;
-
-    background: #fffaf1 !important;
-
-    color: #2c241d !important;
-
-    border: 2px solid #9a816d !important;
-
-    height: 64px !important;
-
-    padding: 0 1rem 0 3.5rem !important;
-
-    border-radius: 0 !important;
-
-    box-shadow: none !important;
-}
-
-/* SEARCH ICON */
-
-.pagefind-ui__search-icon {
-
-    position: absolute !important;
-
-    left: 1rem !important;
-
-    top: 20px !important;
-}
-
-/* CLEAR BUTTON */
-
-.pagefind-ui__search-clear {
-
-    /* top: 20px !important; */
-    display: none !important;
-}
-
-/* RESULTS */
-
-.pagefind-ui__result {
-
-    border-top: 1px solid rgba(0, 0, 0, 0.08);
-
-    padding-top: 1rem;
-
-    margin-top: 1rem;
-}
-
-.pagefind-ui__result-title {
-
-    font-family: 'VT323', monospace !important;
-
-    font-size: 1.5rem !important;
-}
-
 .note-updated {
     font-size: 0.85rem;
     color: var(--muted-text);
@@ -1081,6 +992,7 @@ p {
         margin-right: 0.8rem;
         white-space: nowrap;
         flex-shrink: 0;
+        font-weight: var(--nav-weight);
     }
 
     /* IMPORTANT FIX */
@@ -1088,11 +1000,6 @@ p {
         margin-left: 0 !important;
         flex-shrink: 0;
         white-space: nowrap;
-    }
-
-    #search {
-        /* margin-bottom: clamp(2rem, 6vw, 5rem); */
-        margin-bottom: 0;
     }
 
     .hero {
