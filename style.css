@@ -796,6 +796,20 @@ pre {
         gap: 0rem;
     }
 
+    .site-header {
+        width: 100%;
+        text-align: left;
+        align-items: flex-start;
+    }
+
+    .site-title {
+        text-align: left;
+    }
+
+    .site-meta {
+        text-align: left;
+    }
+
     .pixel-gif {
 
         margin-left: 20px;
