@@ -1,9 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=VT323&family=IBM+Plex+Sans:wght@500;600;700&display=swap');
+@import url('https://cdn.jsdelivr.net/npm/computer-modern-web-font@1.0.0/fonts.css');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=VT323&family=IBM+Plex+Sans:wght@500;600;700&family=Nunito:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&display=swap');
 
-:root {
+/* :root { */
 
-    /* brown theme */
-    --bg: #f5efe4;
+/* brown theme */
+/* --bg: #f5efe4;
 
     --paper: #fffaf1;
 
@@ -11,10 +16,10 @@
 
     --border: #b89b72;
 
-    --accent: #7b5a36;
+    --accent: #7b5a36; */
 
-    /* default theme */
-    /* --bg: #f7f7f7;
+/* default theme */
+/* --bg: #f7f7f7;
 
     --paper: #ffffff;
 
@@ -23,6 +28,185 @@
     --border: #d9d9d9;
 
     --accent: #6a5c53; */
+/* } */
+
+:root {
+    --bg: #f5efe4;
+    --paper: #fffaf1;
+    --text: #2c241d;
+    --border: #b89b72;
+    --accent: #7b5a36;
+
+    --body-font: 'IBM Plex Sans', sans-serif;
+    --heading-font: 'VT323', monospace;
+
+    --selection-bg: #dfe6ef;
+    --selection-text: #111111;
+
+    --muted-text: rgba(44, 36, 29, 0.65);
+}
+
+/* =========================================
+   THEMES
+========================================= */
+
+[data-theme="brown"] {
+    --bg: #f5efe4;
+    --paper: #fffaf1;
+    --text: #2c241d;
+    --border: #b89b72;
+    --accent: #7b5a36;
+
+    --navbar-bg: #5b4a3f;
+    --navbar-border: #9a816d;
+    --navbar-text: #f5ead9;
+
+    --body-font: 'IBM Plex Sans', sans-serif;
+    --heading-font: 'VT323', monospace;
+}
+
+[data-theme="gray"] {
+    --bg: #f7f7f7;
+    --paper: #ffffff;
+    --text: #3f3f3f;
+    --border: #d9d9d9;
+    --accent: #6a5c53;
+
+    --navbar-bg: #ecece8;
+    --navbar-border: #d0d0cc;
+    --navbar-text: #444444;
+
+    --body-font: 'IBM Plex Sans', sans-serif;
+    --heading-font: 'IBM Plex Sans', sans-serif;
+}
+
+[data-theme="ibm"] {
+    --bg: #ffffff;
+    --paper: #ffffff;
+    --text: #222222;
+    --border: #d8d8d8;
+    --accent: #444444;
+
+    --navbar-bg: #161616;
+    --navbar-border: #393939;
+    --navbar-text: #f4f4f4;
+
+    --body-font: 'IBM Plex Sans', sans-serif;
+    --heading-font: 'IBM Plex Sans', sans-serif;
+}
+
+[data-theme="academic"] {
+    --bg: #f6f6f4;
+    --paper: #fcfcfa;
+
+    --text: #111111;
+    --border: #d4d4d4;
+    --accent: #2f2f2f;
+
+    --navbar-bg: #ecece8;
+    --navbar-border: #d0d0cc;
+    --navbar-text: #222222;
+
+    --selection-bg: #d8d8d8;
+    --selection-text: #111111;
+
+    --body-font: 'Nunito', sans-serif;
+    --heading-font: 'Nunito', sans-serif;
+}
+
+[data-theme="forest-soft"] {
+    --bg: #f2f4f1;
+    --paper: #fbfcfa;
+
+    --text: #232824;
+    --border: #c9d2c8;
+    --accent: #4f6b55;
+
+    --navbar-bg: #3f4a41;
+    --navbar-border: #7a8a7e;
+    --navbar-text: #e8efe9;
+
+    --selection-bg: #cfd8d1;
+    --selection-text: #111111;
+
+    --body-font: 'IBM Plex Sans', sans-serif;
+    --heading-font: 'IBM Plex Sans', sans-serif;
+}
+
+[data-theme="sepia-night"] {
+    --bg: #1f1a16;
+    --paper: #2a231e;
+
+    --text: #e7dccf;
+    --border: #4a3d34;
+    --accent: #c2a07c;
+
+    --navbar-bg: #2a221d;
+    --navbar-border: #5a4a3f;
+    --navbar-text: #f3e6d6;
+
+    --selection-bg: #5a4636;
+    --selection-text: #fff2e3;
+
+    --body-font: 'IBM Plex Sans', sans-serif;
+    --heading-font: 'IBM Plex Sans', sans-serif;
+}
+
+[data-theme="fog-paper"] {
+    --bg: #f5f5f3;
+    --paper: #ffffff;
+
+    --text: #2f2f2f;
+    --border: #d6d6d2;
+    --accent: #6b6b6b;
+
+    --navbar-bg: #e8e8e4;
+    --navbar-border: #cfcfcb;
+    --navbar-text: #2f2f2f;
+
+    --selection-bg: #dcdcdc;
+    --selection-text: #111111;
+
+    --body-font: 'IBM Plex Sans', sans-serif;
+    --heading-font: 'IBM Plex Sans', sans-serif;
+}
+
+[data-theme="blue-paper"] {
+    --bg: #f3f6f8;
+    --paper: #fbfcfd;
+
+    --text: #1f2a33;
+    --border: #c9d3db;
+    --accent: #4c6a88;
+
+    --navbar-bg: #e6edf2;
+    --navbar-border: #c7d3dc;
+    --navbar-text: #1f2a33;
+
+    --selection-bg: #cfdceb;
+    --selection-text: #0f1720;
+
+    --body-font: 'IBM Plex Sans', sans-serif;
+    --heading-font: 'IBM Plex Sans', sans-serif;
+}
+
+[data-theme="earth-minimal"] {
+    --bg: #f6f1ea;
+    --paper: #fcf8f2;
+
+    --text: #2b2620;
+    --border: #ddd0c2;
+    --accent: #7a6a58;
+
+    --navbar-bg: #e7dfd6;
+    --navbar-border: #d2c7bb;
+    --navbar-text: #2b2620;
+
+    --selection-bg: #e1d4c6;
+    --selection-text: #111111;
+
+    --body-font: 'IBM Plex Sans', sans-serif;
+    --heading-font: 'IBM Plex Sans', sans-serif;
 }
 
 * {
@@ -43,7 +227,8 @@ body {
 
     color: var(--text);
 
-    font-family: 'IBM Plex Sans', sans-serif;
+    /* font-family: 'IBM Plex Sans', sans-serif; */
+    font-family: var(--body-font);
 
     font-weight: 600;
 
@@ -78,9 +263,9 @@ body {
 
 .navbar {
 
-    background: #5b4a3f;
+    background: var(--navbar-bg);
 
-    border-bottom: 2px solid #9a816d;
+    border-bottom: 2px solid var(--navbar-border);
 
     padding: 1rem 2rem;
 
@@ -110,7 +295,8 @@ body {
 
 .navbar a {
 
-    font-family: 'VT323', monospace;
+    /* font-family: 'VT323', monospace; */
+    font-family: var(--heading-font);
 
     font-size: 2rem;
 
@@ -123,7 +309,7 @@ body {
     /* color: #f3e7d3; */
 
     /* Muted Coffee Brown */
-    color: #f5ead9;
+    color: var(--navbar-text);
     letter-spacing: 0.04em;
     transition: 0.12s ease;
 
@@ -161,7 +347,8 @@ body {
 
 h1 {
 
-    font-family: 'VT323', monospace;
+    /* font-family: 'VT323', monospace; */
+    font-family: var(--heading-font);
 
     font-size: clamp(2.5rem, 8vw, 6rem);
 
@@ -179,7 +366,8 @@ h1 {
 h2,
 h3 {
 
-    font-family: 'VT323', monospace;
+    /* font-family: 'VT323', monospace; */
+    font-family: var(--heading-font);
 
     text-transform: uppercase;
 
@@ -208,7 +396,8 @@ h3 {
     /* brown theme */
     background: var(--paper);
 
-    border: 2px solid rgba(123, 90, 54, 0.18);
+    /* border: 2px solid rgba(123, 90, 54, 0.18); */
+    border: 1px solid var(--border);
 
     border-radius: 0px;
 
@@ -252,7 +441,8 @@ h3 {
 
 .post-title {
 
-    font-family: 'VT323', monospace;
+    /* font-family: 'VT323', monospace; */
+    font-family: var(--heading-font);
 
     font-size: 1.6rem;
 
@@ -264,7 +454,8 @@ h3 {
 
     display: inline-block;
 
-    font-family: 'VT323', monospace;
+    /* font-family: 'VT323', monospace; */
+    font-family: var(--heading-font);
 
     font-size: 1rem;
 
@@ -275,27 +466,13 @@ h3 {
     margin-bottom: 0.5rem;
 }
 
-.post-date-small {
-
-    opacity: 0.6;
-
-    font-size: 0.85rem;
-
-    margin-bottom: 0.75rem;
-}
-
 /* =========================================
    MATHEMATICAL ENVIRONMENTS
 ========================================= */
 
 body {
     counter-reset:
-        theorem
-        lemma
-        proposition
-        corollary
-        definition
-        claim;
+        theorem lemma proposition corollary definition claim;
 }
 
 /* =========================================
@@ -313,7 +490,7 @@ body {
     padding: 1rem 1.25rem;
 
     background: var(--paper);
-    border: 2px solid rgba(123,90,54,0.18);
+    border: 2px solid rgba(123, 90, 54, 0.18);
 }
 
 .proof,
@@ -407,6 +584,7 @@ body {
 .proof-claim-label::before {
     content: "Proof of Claim. ";
 }
+
 /* =========================================
    KEEP TEXT ON SAME LINE AS LABEL
 ========================================= */
@@ -416,11 +594,12 @@ body {
 .proposition p,
 .corollary p,
 .definition p,
-.claim > p:first-of-type,
+.claim>p:first-of-type,
 .remark p {
     display: inline;
     margin: 0;
 }
+
 .proof p,
 .proof-claim p {
     display: inline;
@@ -551,7 +730,8 @@ pre {
 .footer a {
     text-decoration: none;
     color: var(--accent);
-    font-family: 'VT323', monospace;
+    /* font-family: 'VT323', monospace; */
+    font-family: var(--heading-font);
     font-size: 1.3rem;
 }
 
@@ -750,17 +930,13 @@ pre {
 ========================================= */
 
 ::selection {
-
-    background: #a1866f;
-
-    color: #fffaf1;
+    background: var(--selection-bg);
+    color: var(--selection-text);
 }
 
 ::-moz-selection {
-
-    background: #a1866f;
-
-    color: #fffaf1;
+    background: var(--selection-bg);
+    color: var(--selection-text);
 }
 
 .gif-wrap {
@@ -830,12 +1006,27 @@ p {
     line-height: 1;
 }
 
+.post-date-small {
+
+    opacity: 0.6;
+
+    font-size: 0.85rem;
+
+    margin-bottom: 0.75rem;
+}
+
 .post-date {
     display: block;
     margin-top: 0.3rem;
     font-size: 0.9rem;
     color: var(--border);
 }
+
+/* .post-dates,
+.post-date-small {
+    color: var(--muted-text);
+    opacity: 1;
+} */
 
 .post-meta-row {
     display: flex;
@@ -989,4 +1180,80 @@ p {
     font-family: 'VT323', monospace !important;
 
     font-size: 1.5rem !important;
+}
+
+[data-theme="academic"] .navbar {
+    box-shadow: none;
+}
+
+[data-theme="academic"] h1 {
+    text-transform: none;
+    letter-spacing: 0;
+    font-weight: 400;
+    font-size: clamp(2.5rem, 8vw, 5rem);
+}
+
+[data-theme="academic"] h2,
+[data-theme="academic"] h3 {
+    text-transform: none;
+    letter-spacing: -0.02em;
+    font-weight: 400;
+}
+
+[data-theme="academic"] .theorem,
+[data-theme="academic"] .lemma,
+[data-theme="academic"] .proposition,
+[data-theme="academic"] .corollary,
+[data-theme="academic"] .definition,
+[data-theme="academic"] .claim {
+    background: transparent;
+    border: 1px solid var(--border);
+}
+
+[data-theme="academic"] body {
+    font-weight: 500;
+}
+
+[data-theme="fog-paper"],
+[data-theme="blue-paper"],
+[data-theme="earth-minimal"],
+[data-theme="muted-ink"],
+[data-theme="academic"] {
+    --muted-text: rgba(30, 30, 30, 0.55);
+}
+
+[data-theme="sepia-night"] {
+    --muted-text: rgba(240, 230, 220, 0.65);
+}
+
+.note-updated {
+    font-size: 0.85rem;
+    color: var(--muted-text);
+    letter-spacing: 0.02em;
+}
+
+.site-header {
+    margin: 2rem 0 2.5rem 0;
+}
+
+.site-title {
+    font-family: var(--heading-font);
+    font-size: 2.2rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.4rem;
+    color: var(--text);
+}
+
+.site-meta {
+    font-family: var(--body-font);
+    font-size: 0.95rem;
+    line-height: 1.4;
+    color: var(--muted-text);
+}
+
+.site-email {
+    font-family: var(--body-font);
+    font-size: 0.95rem;
+    color: var(--muted-text);
 }
