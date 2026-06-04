@@ -614,7 +614,6 @@ p {
 }
 
 .post-tag {
-    color: var(--btn-bg);
     margin-bottom: 0;
 }
 
@@ -757,7 +756,7 @@ p {
     gap: -1rem;
 
     margin-top: -1rem;
-    margin-bottom: 4rem;
+    margin-bottom: 1rem;
 }
 
 .notes-list h2 {
