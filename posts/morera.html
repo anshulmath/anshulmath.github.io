@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html data-theme="dark-gray" lang="en">
 
 <head>
 
@@ -7,9 +7,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>
-        MORERA'S THEOREM
-    </title>
+    <title>MORERA'S THEOREM</title>
 
     <link rel="stylesheet" href="../style.css">
 
@@ -28,14 +26,36 @@
 <body>
 
     <nav class="navbar">
+        <div class="nav-inner">
 
-        <a href="../index.html">HOME</a>
+            <div class="nav-left">
+                <a href="../index.html">HOME</a>
+                <a href="../notes.html">NOTES</a>
+                <a href="../about.html">ABOUT</a>
+            </div>
 
+            <button id="theme-toggle" class="theme-toggle">◐</button>
+        </div>
     </nav>
 
     <div class="container">
+        <div class="post-header">
 
-        <h1 data-pagefind-meta="title">MORERA'S THEOREM</h1>
+            <div class="post-meta">
+
+                <h1>Morera's Theorem</h1>
+
+                <p class="post-date-small">
+                    May 29, 2026
+                </p>
+
+            </div>
+        </div>
+
+        <p>
+            Morera's theorem is a converse to Cauchy's theorem. It states that if a continuous function has
+            vanishing contour integrals, then it is holomorphic.
+        </p>
 
         <p>
             Let $f: \Omega \to \mathbb{C}$ be a continuous function defined on an open set $\Omega \subset
@@ -68,6 +88,43 @@
         </p>
 
     </div>
+
+    <!-- Footer -->
+
+    <div id="footer"></div>
+
+    <script>
+        fetch('/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            });
+    </script>
+
+    <script>
+        const toggle = document.getElementById("theme-toggle");
+
+        // load saved theme or default
+        const savedTheme = localStorage.getItem("theme") || "light-gray";
+        document.documentElement.setAttribute("data-theme", savedTheme);
+
+        updateIcon(savedTheme);
+
+        toggle.addEventListener("click", () => {
+            const current = document.documentElement.getAttribute("data-theme");
+
+            const next = current === "light-gray" ? "dark-gray" : "light-gray";
+
+            document.documentElement.setAttribute("data-theme", next);
+            localStorage.setItem("theme", next);
+
+            updateIcon(next);
+        });
+
+        function updateIcon(theme) {
+            toggle.textContent = theme === "dark-gray" ? "◑" : "◐";
+        }
+    </script>
 
 </body>
 
