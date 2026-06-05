@@ -580,6 +580,9 @@ mjx-container {
 
 mjx-container[display="true"] {
     margin: 0.5rem 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    max-width: 100%;
 }
 
 p {
@@ -851,6 +854,10 @@ p {
 ========================================= */
 
 @media (max-width: 700px) {
+
+    mjx-container {
+        font-size: 0.9em !important;
+    }
 
     .notes-columns {
         grid-template-columns: 1fr;
