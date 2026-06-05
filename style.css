@@ -580,9 +580,9 @@ mjx-container {
 
 mjx-container[display="true"] {
     margin: 0.5rem 0;
-    overflow-x: auto;
-    overflow-y: hidden;
-    max-width: 100%;
+    overflow-x: auto; /* fixing latex overflow */
+    overflow-y: hidden; /* fixing latex overflow */
+    max-width: 100%; /* fixing latex overflow */
 }
 
 p {
@@ -855,6 +855,7 @@ p {
 
 @media (max-width: 700px) {
 
+    /* fixing latex overflow */
     mjx-container {
         font-size: 0.9em !important;
     }
@@ -1169,10 +1170,14 @@ body {
 .corollary-label,
 .definition-label,
 .claim-label,
-.remark-label,
+.remark-label {
+    font-weight: 600;
+}
+
 .proof-label,
 .proof-claim-label {
-    font-weight: bold;
+    font-weight: 400;
+    font-style: italic;
 }
 
 /* =========================================
