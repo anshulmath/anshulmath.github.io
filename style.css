@@ -377,7 +377,8 @@ blockquote {
 code,
 pre {
 
-    font-family: 'VT323', monospace;
+    /* mathjax clipboard font */
+    /* font-family: 'VT323', monospace; */
 
     background: #eee6d8;
 
