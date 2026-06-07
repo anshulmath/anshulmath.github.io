@@ -458,6 +458,7 @@ pre {
 
 .hero-image img {
     margin-top: 3rem;
+    margin-right: -0.5rem;
     width: 100px;
     height: 100px;
 
@@ -958,6 +959,7 @@ p {
         align-self: center;
         margin-top: -4rem;
         margin-bottom: -1rem;
+        margin-right: 0.5rem;
     }
 
     .hero-image img {
@@ -1340,4 +1342,23 @@ body {
 
 [data-theme="dark-gray"] .wizard-dark {
     display: block;
+}
+
+/* Ying-Yang theme icon */
+
+.theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.yin-yang {
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+/* Rotate when dark mode is active */
+[data-theme="dark-gray"] .yin-yang {
+    transform: rotate(180deg);
 }
