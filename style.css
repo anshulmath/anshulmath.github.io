@@ -621,6 +621,7 @@ p {
     font-size: 0.85rem;
 
     margin-bottom: 0.75rem;
+    margin-top: 0rem;
 }
 
 .post-date {
@@ -700,7 +701,7 @@ p {
     font-size: calc(2.2rem * var(--heading-scale));
     font-weight: 600;
     letter-spacing: -0.02em;
-    margin-bottom: 0.4rem;
+    margin-bottom: 0rem;
     color: var(--text);
 }
 
