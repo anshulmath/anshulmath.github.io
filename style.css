@@ -862,6 +862,18 @@ p {
 
 @media (max-width: 530px) {
 
+    .news-ticker {
+        max-width: 100%;
+        width: 100%;
+        white-space: normal;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+    }
+
+    .container {
+        padding-bottom: 2rem;
+    }
+
     /* fixing latex overflow */
     mjx-container {
         font-size: 0.9em !important;
@@ -1414,42 +1426,4 @@ body {
     padding-top: 0.5rem;
     margin-top: 2rem;
     max-width: 500px;
-}
-
-.news-hover {
-    position: relative;
-    display: inline-block;
-
-    font-family: var(--heading-font);
-    letter-spacing: 0.1em;
-    font-size: 0.85rem;
-    opacity: 0.7;
-    cursor: default;
-}
-
-.news-popup {
-    position: absolute;
-    left: 0;
-    top: 120%;
-
-    width: 240px;
-
-    background: var(--paper);
-    border: 1px solid var(--border);
-
-    padding: 0.8rem;
-
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(5px);
-
-    transition: 0.15s ease;
-
-    z-index: 1000;
-}
-
-.news-hover:hover .news-popup {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
 }
