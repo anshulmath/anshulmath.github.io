@@ -770,7 +770,8 @@ p {
 
 .theme-toggle:hover {
     opacity: 0.8;
-    transform: translateY(-1px);
+    /* transform: translateY(-1px); */
+    transform: scale(0.94);
 }
 
 /* =========================================
@@ -1374,11 +1375,6 @@ body {
 [data-theme="dark-gray"] .yin-yang {
     transform: rotate(180deg);
 }
-
-
-
-
-
 
 
 
