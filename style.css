@@ -1341,10 +1341,6 @@ body {
     transition: transform 0.12s ease;
 }
 
-.notes-list li:hover {
-    transform: translateX(2px);
-}
-
 .wizard-dark {
     display: none;
 }
