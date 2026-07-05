@@ -12,20 +12,16 @@ html {
     --bg: #f5efe4;
     --paper: #fffaf1;
     --text: #2c241d;
-    /* --border: #b89b72; */
     --border: #e6dbcc;
-    /* --accent: #7b5a36; */
     --accent: #222222;
 
-    --heading-scale: 0.9;
-
     --body-font: 'IBM Plex Sans', sans-serif;
-    /* --heading-font: 'VT323', monospace; */
     --heading-font: 'IBM Plex Mono', monospace;
 
     --selection-bg: #dfe6ef;
     --selection-text: #111111;
 
+    --heading-scale: 0.9;
     --heading-spacing: 0.04em;
     --nav-spacing: 0em;
 
@@ -42,36 +38,12 @@ html {
     --btn-dark-edge: #cfc7bb;
 
     --page-padding: 2rem;
+    
 }
 
 /* =========================================
    THEMES
 ========================================= */
-
-[data-theme="brown"] {
-    --bg: #f5efe4;
-    --paper: #fffaf1;
-    --text: #2c241d;
-    --border: #b89b72;
-    --accent: #7b5a36;
-
-    --navbar-bg: #5b4a3f;
-    --navbar-border: #9a816d;
-    --navbar-text: #f5ead9;
-
-    --body-font: 'IBM Plex Sans', sans-serif;
-    --heading-font: 'VT323', monospace;
-
-    --heading-font: 'VT323', monospace;
-    --heading-scale: 1;
-
-    --btn-bg: #5b4a3f;
-    --btn-text: #f5ead9;
-
-    --btn-light-edge: #9a816d;
-    --btn-dark-edge: #3d3129;
-
-}
 
 [data-theme="gray"] {
     --bg: #f7f7f7;
@@ -100,11 +72,7 @@ html {
     --bg: #20201e;
     --paper: #292826;
     --border: #3b3a37;
-    /* colors only */
-    /* --bg: #1f1f1f;
-    --paper: #262626;
-    --border: #3a3a3a; */
-    --text: #e6e6e6;
+    --text: #e6e6e6; 
     --accent: #b0b0b0;
 
     --navbar-bg: #2a2a2a;
@@ -121,12 +89,9 @@ html {
 
     --muted-text: rgba(230, 230, 230, 0.65);
 
-    /* use the same typography as the light theme */
     --body-font: 'IBM Plex Sans', sans-serif;
-    /* --heading-font: 'VT323', monospace; */
     --heading-font: 'IBM Plex Mono', monospace;
 
-    /* use the same sizing and spacing as the light theme */
     --heading-scale: 0.9;
     --heading-spacing: 0.04em;
     --nav-spacing: 0em;
@@ -1351,25 +1316,6 @@ body {
 
 [data-theme="dark-gray"] .wizard-dark {
     display: block;
-}
-
-/* Ying-Yang theme icon */
-
-.theme-toggle {
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-}
-
-.yin-yang {
-    display: block;
-    transition: transform 0.4s ease;
-}
-
-/* Rotate when dark mode is active */
-[data-theme="dark-gray"] .yin-yang {
-    transform: rotate(180deg);
 }
 
 
