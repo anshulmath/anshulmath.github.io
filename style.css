@@ -13,7 +13,7 @@ html {
     --accent: #222222;
 
     --navbar-bg: #fffaf1;
-    /* --navbar-border: #fffaf1; */
+    --navbar-border: #e6dbcc;
     /* --navbar-text: #f0f0f0; */
     --nav-weight: 800;
 
@@ -192,6 +192,10 @@ body {
 
     color: var(--text);
 
+    transition:
+        background-color 0.35s ease,
+        color 0.35s ease;
+
     /* font-family: 'IBM Plex Sans', sans-serif; */
     font-family: var(--body-font);
 
@@ -225,8 +229,8 @@ body {
 
     width: 100%;
 
-    box-shadow:
-        0 2px 10px rgba(0, 0, 0, 0.08);
+    /* box-shadow:
+        0 2px 10px rgba(0, 0, 0, 0.08); */
 }
 
 .nav-inner {
@@ -1313,4 +1317,15 @@ body {
     padding-top: 0.5rem;
     margin-top: 2rem;
     max-width: 500px;
+}
+
+*,
+*::before,
+*::after {
+    transition:
+        background-color 0.35s ease,
+        color 0.35s ease,
+        border-color 0.35s ease,
+        fill 0.35s ease,
+        stroke 0.35s ease;
 }
