@@ -24,10 +24,6 @@
     <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
     </script>
 
-    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
-
-    <script src="/pagefind/pagefind-ui.js"></script>
-
 </head>
 
 <body>
@@ -38,7 +34,7 @@
             <div class="nav-left">
                 <a href="index.html">HOME</a>
                 <a href="notes.html">NOTES</a>
-                <a href="about.html">MISC</a>
+                <a href="misc.html">MISC</a>
             </div>
 
             <button id="theme-toggle" class="theme-toggle">◐</button>
@@ -107,31 +103,6 @@
                 document.getElementById('footer').innerHTML = data;
             });
     </script>
-
-    <!-- <script>
-        const toggle = document.getElementById("theme-toggle");
-
-        // load saved theme or default
-        const savedTheme = localStorage.getItem("theme") || "light-gray";
-        document.documentElement.setAttribute("data-theme", savedTheme);
-
-        updateIcon(savedTheme);
-
-        toggle.addEventListener("click", () => {
-            const current = document.documentElement.getAttribute("data-theme");
-
-            const next = current === "light-gray" ? "dark-gray" : "light-gray";
-
-            document.documentElement.setAttribute("data-theme", next);
-            localStorage.setItem("theme", next);
-
-            updateIcon(next);
-        });
-
-        function updateIcon(theme) {
-            toggle.textContent = theme === "dark-gray" ? "◑" : "◐";
-        }
-    </script> -->
 
     <script>
         const toggle = document.getElementById("theme-toggle");

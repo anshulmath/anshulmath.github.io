@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html data-theme="dark-gray" lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Anshul Math</title>
+
+    <link rel="icon" href="favicon.ico">
+
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+            }
+        };
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="nav-inner">
+
+            <div class="nav-left">
+                <a href="index.html">HOME</a>
+                <a href="notes.html">NOTES</a>
+                <a href="misc.html">MISC</a>
+            </div>
+
+            <button id="theme-toggle" class="theme-toggle">◐</button>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <div class="hero">
+
+            <div class="site-header">
+                <div class="site-title">ANSHUL.MATH</div>
+                <div class="site-meta">
+                    <div>ISI Bangalore</div>
+                    <div class="site-email">bmat2405@isibang.ac.in</div>
+                </div>
+            </div>
+
+            <div class="hero-image">
+                <div class="wizard">
+                    <img src="assets/images/adeventure.png" class="wizard-light" alt="Wizard">
+                    <img src="assets/images/whiteadeventure.png" class="wizard-dark" alt="Wizard">
+                </div>
+            </div>
+        </div>
+
+        <p>
+            Seminars
+        </p>
+
+        <div class="notes-columns">
+
+            <div class="notes-list">
+
+                <h2>Seminar on Automorphic Representations</h2>
+
+                <ul>
+                    <li><a></a>Notes<a href="pdf/algebra.pdf">[pdf]</a></li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+
+        <!-- Footer -->
+
+        <div id="footer"></div>
+
+        <script>
+            fetch('/footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer').innerHTML = data;
+                });
+        </script>
+
+        <script>
+            const toggle = document.getElementById("theme-toggle");
+
+            const savedTheme = localStorage.getItem("theme") || "light-gray";
+            document.documentElement.setAttribute("data-theme", savedTheme);
+
+            toggle.addEventListener("click", () => {
+                const current = document.documentElement.getAttribute("data-theme");
+
+                const next = current === "light-gray"
+                    ? "dark-gray"
+                    : "light-gray";
+
+                document.documentElement.setAttribute("data-theme", next);
+                localStorage.setItem("theme", next);
+            });
+        </script>
+
+</body>
+
+</html>
