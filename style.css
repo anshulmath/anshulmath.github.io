@@ -765,11 +765,18 @@ p {
    NOTES LIST  
 ========================================= */
 
-.notes-columns {
+/* .notes-columns {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: -1rem;
 
+    margin-top: -1rem;
+    margin-bottom: 1rem;
+} */
+
+.notes-columns {
+    display: grid;
+    grid-template-columns: 1fr;
     margin-top: -1rem;
     margin-bottom: 1rem;
 }
@@ -867,9 +874,15 @@ p {
         font-size: 0.9em !important;
     }
 
-    .notes-columns {
+    /* .notes-columns {
         grid-template-columns: 1fr;
         gap: -1rem;
+        margin-top: -1rem;
+        margin-bottom: 4rem;
+    } */
+
+    .notes-columns {
+        grid-template-columns: 1fr;
         margin-top: -1rem;
         margin-bottom: 4rem;
     }
